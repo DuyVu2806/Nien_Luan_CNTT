@@ -1,4 +1,22 @@
-<section class="ftco-section " >
+<style>
+    nav {
+        position: fixed;
+        top: 0.5rem;
+    }
+
+    nav.scrolled {
+        top: 0;
+        position: fixed;
+        width: 100%;
+    }
+</style>
+<script>
+    window.addEventListener('scroll', function() {
+        var nav = document.querySelector('nav');
+        nav.classList.toggle('scrolled', window.scrollY > 15);
+    });
+</script>
+<section class="ftco-section ">
     <div class="container-fluid px-md-5">
         <div class="row justify-content-between">
             <div class="col-md-8 order-md-last">
@@ -7,7 +25,7 @@
                         <a class="navbar-brand" href="/">DV Store <span>Ecommerce</span></a>
                     </div>
                     <div class="col-md-6 d-md-flex justify-content-end mb-md-0 mb-3">
-                        <form action="{{url('/search')}}" class="searchform order-lg-last">
+                        <form action="{{ url('/search') }}" class="searchform order-lg-last">
                             <div class="form-group d-flex">
                                 <input type="text" name="query" class="form-control pl-3 " placeholder="Search">
                                 <button type="submit" placeholder="" class="form-control search"><span
@@ -52,7 +70,7 @@
                         </div>
                     </li>
                     <li class="nav-item"><a href="#" class="nav-link">Blog</a></li>
-                    <li class="nav-item"><a href="{{url('/contact')}}" class="nav-link">Contact</a></li>
+                    <li class="nav-item"><a href="{{ url('/contact') }}" class="nav-link">Contact</a></li>
                     @guest
                         @if (Route::has('login'))
                             <li class="nav-item ms-3">

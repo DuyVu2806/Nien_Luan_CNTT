@@ -32,20 +32,17 @@
         html {
             scroll-behavior: smooth;
         }
-
+/* 
         nav {
             position: fixed;
             width: 100%;
             z-index: 1000000;
             top: 0;
-        }
+        } */
     </style>
     <div id="app" class="position-relative">
-        <nav class="bg-light">
-            @include('layouts.inc.frontend.navbar')
-        </nav>
-
-        <main class="container" style="margin-top: 11rem">
+        @include('layouts.inc.frontend.navbar')
+        <main class="container" >
             <div class="py-3 py-md-2 bg-light" style="min-height: 1000px">
                 @yield('content')
             </div>

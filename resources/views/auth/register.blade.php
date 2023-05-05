@@ -6,7 +6,7 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-12">
-                {{-- <div class="card shadow mt-5">
+            {{-- <div class="card shadow mt-5">
                 <div class="card-header text-light" style="background-color: blue">{{ __('REGISTER') }}</div>
                 
                 <div class="card-body">
